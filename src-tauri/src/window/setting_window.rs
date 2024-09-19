@@ -13,7 +13,7 @@ impl WindowInfoProvider for SettingWindow {
     }
 
     fn title(&self) -> String {
-        "Settings - DLsite Manager".to_owned()
+        "設定 - DLsite Manager".to_owned()
     }
 
     fn size(&self) -> (f64, f64) {

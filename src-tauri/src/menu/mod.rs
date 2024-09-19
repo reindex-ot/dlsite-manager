@@ -22,7 +22,7 @@ pub fn create_menu<R: Runtime>(manager: &impl Manager<R>) -> Result<Menu<R>, tau
     let menu = Menu::new(manager)?;
 
     menu.append(
-        &SubmenuBuilder::new(manager, "Window")
+        &SubmenuBuilder::new(manager, "ウィンドウ")
             .fullscreen()
             .minimize()
             .maximize()
@@ -32,7 +32,7 @@ pub fn create_menu<R: Runtime>(manager: &impl Manager<R>) -> Result<Menu<R>, tau
             .build()?,
     )?;
     menu.append(
-        &SubmenuBuilder::new(manager, "Edit")
+        &SubmenuBuilder::new(manager, "編集")
             .undo()
             .redo()
             .cut()
@@ -42,32 +42,32 @@ pub fn create_menu<R: Runtime>(manager: &impl Manager<R>) -> Result<Menu<R>, tau
             .build()?,
     )?;
     menu.append(
-        &SubmenuBuilder::new(manager, "Account")
-            .text("account/open-account-management", "Open Account Management")
+        &SubmenuBuilder::new(manager, "アカウント")
+            .text("account/open-account-management", "アカウントの管理を開く")
             .build()?,
     )?;
     menu.append(
-        &SubmenuBuilder::new(manager, "Product")
-            .text("product/fetch-new-products", "Fetch New Products")
+        &SubmenuBuilder::new(manager, "商品")
+            .text("product/fetch-new-products", "新しい商品を取得")
             .text(
                 "product/scan-downloaded-products",
-                "Scan Downloaded Products",
+                "ダウンロード済みの商品をスキャン",
             )
             .separator()
             .text(
                 "product/refresh-products-all",
-                "Refresh All Products (Drop Caches)",
+                "すべての商品をスキャン (ドロップキャッシュ)",
             )
             .build()?,
     )?;
     menu.append(
-        &SubmenuBuilder::new(manager, "Setting")
-            .text("setting/open-setting", "Open Settings")
+        &SubmenuBuilder::new(manager, "設定")
+            .text("setting/open-setting", "設定を開く")
             .build()?,
     )?;
     menu.append(
-        &SubmenuBuilder::new(manager, "Log")
-            .text("log/open-log-directory", "Open Log Directory")
+        &SubmenuBuilder::new(manager, "ログ")
+            .text("log/open-log-directory", "ログのディレクトリを開く")
             .build()?,
     )?;
 

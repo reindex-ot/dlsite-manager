@@ -12,7 +12,7 @@ impl WindowInfoProvider for AccountManagementWindow {
     }
 
     fn title(&self) -> String {
-        "Account Management - DLsite Manager".to_owned()
+        "アカウントの管理 - DLsite Manager".to_owned()
     }
 
     fn size(&self) -> (f64, f64) {
